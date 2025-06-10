@@ -36,8 +36,7 @@ Wshshell.SendKeys "{ENTER}"
 
 WScript.Sleep 100
 
-WshShell.SendKeys "( >nul 2>&1 %SYSTEMROOT%\system32\cacls.exe %SYSTEMROOT%\system32\config\system ||"
-
+WshShell.SendKeys"( >nul 2>&1 %SYSTEMROOT%\system32\cacls.exe %SYSTEMROOT%\system32\config\system ||"
 
 WshShell.SendKeys "{ENTER}"
 
