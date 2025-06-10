@@ -10,7 +10,7 @@ WScript.Sleep 100
 
 WshShell.SendKeys "cmd"                               
 
-WScript.Sleep 100
+WScript.Sleep 200
 
 WshShell.SendKeys "{ENTER}" 
 
