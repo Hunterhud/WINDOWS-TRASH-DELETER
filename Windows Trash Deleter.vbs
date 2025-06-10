@@ -14,7 +14,7 @@ WScript.Sleep 200
 
 WshShell.SendKeys "echo UAC.ShellExecute %~s0, "", "", runas, 1 >> %temp%\getadmin.vbstemp%\getadmin.vbs del %temp%\getadmin.vbs exit /b"
 
-WScript 100
+WScript.Sleep 100
 
 Wshshell.SendKeys "{ENTER}"
 
