@@ -37,7 +37,7 @@ Wshshell.SendKeys "{ENTER}"
 WScript.Sleep 100
 
 
-WshShell.SendKeys "(>nul 2>&1 %SYSTEMROOT%\system32\cacls.exe %SYSTEMROOT%\system32\config\system || echo Set UAC = CreateObject^(Shell.Application^) > %temp%\getadmin.vbs"
+WshShell.SendKeys "(>nul 2>&1 %SYSTEMROOT%\system32\cacls.exe %SYSTEMROOT%\system32\config\system ||  Set UAC = CreateObject^(Shell.Application^) > %temp%\getadmin.vbs"
 
 
 WshShell.SendKeys "{ENTER}"
