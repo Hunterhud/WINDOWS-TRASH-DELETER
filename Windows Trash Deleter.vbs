@@ -1,7 +1,8 @@
 Set WshShell = WScript.CreateObject("WScript.Shell")
 
 WshShell.Run "cmd"
- 
+
+WScript.Sleep 100
 
 WshShell.SendKeys "net session >nul 2>&1if %errorLevel% == 0 (set admin=1) else ( set admin=0)" 
 
