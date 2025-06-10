@@ -1,16 +1,16 @@
 Set WshShell = WScript.CreateObject("WScript.Shell")
 WshShell.SendKeys "^{ESC}" ' Simulates pressing Ctrl + Esc to open the Start menu
-WScript.Sleep 100 ' Wait for a moment to ensure the Start menu opens
+WScript.Sleep 200 ' Wait for a moment to ensure the Start menu opens
 WshShell.SendKeys "r" ' Simulates pressing the R key
-WScript.Sleep 200
+WScript.Sleep 300
 
 WshShell.SendKeys "{ENTER}" ' Simulates pressing the Enter key
 
 WScript.Sleep 100
 
-WshShell.SendKeys "cmd"                               
-
-WScript.Sleep 200
+Set WshShell = WScript.CreateObject("WScript.Shell")
+WshShell.Run "cmd"
+WScript.Sleep 500
 
 WshShell.SendKeys "{ENTER}" 
 
