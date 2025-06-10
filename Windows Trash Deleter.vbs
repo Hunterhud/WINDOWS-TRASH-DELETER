@@ -14,11 +14,10 @@ WScript.Sleep 200
 
 WshShell.SendKeys "echo UAC.ShellExecute %~s0, "", "", runas, 1 >> %temp%\getadmin.vbstemp%\getadmin.vbs del %temp%\getadmin.vbs exit /b"
 
-WScript.Sleep 200
+WScript 100
 
 Wshshell.SendKeys "{ENTER}"
 
-WScript.Sleep 300
 
  WshShell.SendKeys "if %errorLevel% == 0 ( set admin=1 ) else ( set admin=0 ) REM If not running with admin privileges, elevate if %admin%==0" 
 
