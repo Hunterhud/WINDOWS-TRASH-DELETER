@@ -8,9 +8,7 @@ WshShell.SendKeys "{ENTER}" ' Simulates pressing the Enter key
 
 WScript.Sleep 100
 
-Set WshShell = WScript.CreateObject("WScript.Shell")
 WshShell.Run "cmd"
-WScript.Sleep 500
 
 WshShell.SendKeys "{ENTER}" 
 
