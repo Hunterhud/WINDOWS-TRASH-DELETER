@@ -3,8 +3,10 @@ Set WshShell = WScript.CreateObject("WScript.Shell")
 WshShell.Run "cmd"
  
 
-WshShell.SendKeys " net session >nul 2>&1if %errorLevel% == 0 (set admin=1) else ( set admin=0)" 
- 
+WshShell.SendKeys "net session >nul 2>&1if %errorLevel% == 0 (set admin=1) else ( set admin=0)" 
+
+WScript.Sleep 100 
+
 
 Wshshell.SendKeys "{ENTER}"
 
@@ -14,7 +16,7 @@ WshShell.SendKeys "echo UAC.ShellExecute %~s0, "", "", runas, 1 >> %temp%\getadm
 
 Wshshell.SendKeys "{ENTER}"
 
-WScript.Sleep 200
+WScript.Sleep 300
 
  WshShell.SendKeys "if %errorLevel% == 0 ( set admin=1 ) else ( set admin=0 ) REM If not running with admin privileges, elevate if %admin%==0" 
 
